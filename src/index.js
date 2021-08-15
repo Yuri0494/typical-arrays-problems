@@ -1,12 +1,15 @@
 
 exports.min = function min (array) {
-  return 0;
+
+  return array.sort((a, b) => a-b);
 }
 
 exports.max = function max (array) {
-  return 0;
+  return array.sort((a, b) => b-a);
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  let res = 0;
+  array.forEach(i => res+=i)
+  return res / array.length;
 }
